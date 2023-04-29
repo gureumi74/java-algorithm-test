@@ -1,4 +1,4 @@
-package com.algorithm.algorithmtest.programmers.basicday11;
+package com.algorithm.algorithmtest.programmers.basic.day11;
 
 public class Solution1 {
     public static int solution(int[] box, int n) {

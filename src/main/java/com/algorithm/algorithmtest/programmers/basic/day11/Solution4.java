@@ -1,4 +1,4 @@
-package com.algorithm.algorithmtest.programmers.basicday11;
+package com.algorithm.algorithmtest.programmers.basic.day11;
 
 public class Solution4 {
     public static int solution(int n) {
