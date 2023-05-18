@@ -1,6 +1,5 @@
 package com.algorithm.algorithmtest.baekjoon4.bj5;
 
-import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.Scanner;
 
