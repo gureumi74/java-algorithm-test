@@ -6,10 +6,11 @@ import java.util.*;
 public class BOJ15683 {
     static int[][] office, copyOffice, coordinate = new int[8][2];
     static int count, total, location, arr[], cctvCase[] = new int[8], max;
+
+    // 오른쪽, 아래, 왼쪽, 위
     static int[][] dist = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st = new StringTokenizer(br.readLine());
         int x = Integer.parseInt(st.nextToken()); // 행
         int y = Integer.parseInt(st.nextToken()); // 열
@@ -33,6 +34,7 @@ public class BOJ15683 {
         // 백트래킹을 하기 위한 arr 선언 (모든 cctv의 경우의 수)
         arr = new int[location];
         solution(0);
+        // 가장 많이 이동한 수를 전체 사각지대에서 빼주면 가장 적은 사각지대가 출력
         System.out.println(total - max);
 
     }
@@ -67,7 +69,7 @@ public class BOJ15683 {
                         nx = dist[(arr[i] + 1) % 4][0];
                         ny = dist[(arr[i] + 1) % 4][1];
                     } else {
-                        // 2가 아니가 3, 4, 5일 경우 시계방향으로 한칸 이동해서 체크
+                        // 2가 아니고 3, 4, 5일 경우 시계방향으로 한칸 이동해서 체크
                         nx = dist[arr[i] % 4][0];
                         ny = dist[arr[i] % 4][1];
                     }
